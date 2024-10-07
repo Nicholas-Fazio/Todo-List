@@ -33,4 +33,10 @@ This is a project for learning the PERN stack
 - create CRUD operations in index.js
 - have server start listening on a port (ex: port 5000)
 ## Notes
-- when using localhost port 5000 on a MacOS you have to disable General>AirDrop & Handoff>AirPlay Reciever in order to free up port 5000 
+- when using localhost port 5000 on a MacOS you have to disable General>AirDrop & Handoff>AirPlay Reciever in order to free up port 5000
+- when installing postgresql for first time, the command psql was not found. So to fix it, go into terminal
+  1. vi ~/.zshrc
+  2. go to bottom of file with arrow keys, press i to insert
+  3. type: export PATH=/Library/PostgreSQL/17/bin/:$PATH
+  4. press ESC then :wq to save and quit the editor
+  5. restart terminal session and run the psql command
