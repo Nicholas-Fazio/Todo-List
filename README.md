@@ -32,3 +32,5 @@ This is a project for learning the PERN stack
 - as seen in index.js set up the require statements and middleware
 - create CRUD operations in index.js
 - have server start listening on a port (ex: port 5000)
+## Notes
+- when using localhost port 5000 on a MacOS you have to disable General>AirDrop & Handoff>AirPlay Reciever in order to free up port 5000 
