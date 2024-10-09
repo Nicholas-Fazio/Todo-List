@@ -1,9 +1,10 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const cors = require("cors");
-const pool = require("./db");
+import cors from "cors";
+import corsOptions from "./config/corsConfig.js";
+import pool from "./db.js";
 //middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json()); //req.body
 
 //ROUTES//
@@ -50,6 +51,7 @@ app.put("/todos/:id", async (req, res) => {
       "UPDATE todo SET description=$2 WHERE todo_id=$1",
       [id, description]
     );
+    console.log("Todo", id, "was updated! = ", req.body);
     res.json("Todo was updated!");
   } catch (err) {
     console.error(err.message);

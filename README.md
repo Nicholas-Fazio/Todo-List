@@ -9,6 +9,21 @@ This is a project for learning the PERN stack
 - ReactJS
 - NodeJS
 
+## To run project in dev mode
+
+- set up .env file in server directory
+  - DB_USERNAME=...
+  - DB_PASSWORD=...
+  - DB_NAME=...
+  - HOST=...
+  - PORT=...
+- in terminal, in server directory run: nodemon
+  - make sure corsConfig.js allows the address and port# from front-end
+- in another terminal, in frontend/vite-project directory run: npm run dev
+  - while in vite CLI enter "o" if a browser did not open yet
+
+## to close everything, ^C each terminal session
+
 ## Things done so far
 
 ### General
@@ -32,7 +47,9 @@ This is a project for learning the PERN stack
 - as seen in index.js set up the require statements and middleware
 - create CRUD operations in index.js
 - have server start listening on a port (ex: port 5000)
+
 ## Notes
+
 - when using localhost port 5000 on a MacOS you have to disable General>AirDrop & Handoff>AirPlay Reciever in order to free up port 5000
 - when installing postgresql for first time, the command psql was not found. So to fix it, go into terminal
   1. vi ~/.zshrc

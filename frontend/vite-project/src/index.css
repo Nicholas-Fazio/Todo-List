@@ -1,0 +1,8 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+#root {
+  width: 90%;
+  margin: auto;
+}
