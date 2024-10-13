@@ -10,14 +10,20 @@ This is a project for learning the PERN stack
 - NodeJS
 
 ## To run project in dev mode
-
+- start postgresql database in terminal window
+  - run: psql -U DB_USERNAME
+    - enter DB_PASSWORD
+  - in psql command line
+    - Connect to "perntodo" database: \c perntodo
+      - to list databases: \l
+      - to see schema: \dt
 - set up .env file in server directory
   - DB_USERNAME=...
   - DB_PASSWORD=...
   - DB_NAME=...
   - HOST=...
   - PORT=...
-- in terminal, in server directory run: nodemon
+- in another terminal, in server directory run: nodemon
   - make sure corsConfig.js allows the address and port# from front-end
 - in another terminal, in frontend/vite-project directory run: npm run dev
   - while in vite CLI enter "o" if a browser did not open yet
