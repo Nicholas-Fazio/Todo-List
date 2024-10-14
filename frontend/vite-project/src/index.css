@@ -1,8 +1,18 @@
 body {
   display: flex;
+
+  max-width: 768px;
   justify-content: center;
+  background-color: #e0f7fa;
+  color: #455a64;
+  margin: auto;
 }
 #root {
   width: 90%;
   margin: auto;
+}
+button {
+  background-color: #ffccbc;
+  border-radius: 10px;
+  margin-left: 10px;
 }

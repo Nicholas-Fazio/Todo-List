@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px #cfd8dc;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  padding: 5px 2px;
+}
+.item-description {
+  width: fit-content;
+}
+.item-buttons {
+  width: fit-content;
+}

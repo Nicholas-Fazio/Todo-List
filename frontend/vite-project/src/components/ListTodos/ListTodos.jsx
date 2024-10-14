@@ -9,6 +9,7 @@ const ListTodos = () => {
     try {
       const response = await fetch("http://localhost:5000/todos");
       const data = await response.json();
+      data.sort((a, b) => a.todo_id - b.todo_id);
       setTodos(data);
     } catch (error) {
       console.error(error.message);
@@ -70,42 +71,46 @@ const ListTodos = () => {
                 pattern="^[a-zA-Z].*\S$"
                 required
               />
-              <button
-                type="button"
-                onClick={(e) => {
-                  updateTodo(e, todo);
-                }}
-              >
-                ✅
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setEditId(-1);
-                }}
-              >
-                ❌
-              </button>
+              <div className="item-buttons">
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    updateTodo(e, todo);
+                  }}
+                >
+                  ✅
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setEditId(-1);
+                  }}
+                >
+                  ❌
+                </button>
+              </div>
             </li>
           ) : (
             <li key={todo.todo_id}>
-              {todo.description}
-              <button
-                type="button"
-                onClick={() => {
-                  setEditId(todo.todo_id);
-                }}
-              >
-                ✎
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  deleteTodo(todo.todo_id);
-                }}
-              >
-                🗑️
-              </button>
+              <div className="item-description">{todo.description}</div>
+              <div className="item-buttons">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setEditId(todo.todo_id);
+                  }}
+                >
+                  Edit
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    deleteTodo(todo.todo_id);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
             </li>
           )
         )}

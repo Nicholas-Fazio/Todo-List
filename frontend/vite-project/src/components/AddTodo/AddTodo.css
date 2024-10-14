@@ -12,8 +12,11 @@ input#description {
   width: 70%;
   height: 2rem;
   border-radius: 10px;
+  border-color: #cfd8dc;
+  border: none;
+  color: #455a64;
   &::placeholder {
-    color: black;
+    color: #455a64;
   }
 }
 button#submit {
@@ -31,9 +34,6 @@ button#submit {
     width: auto;
     height: 2rem;
     border-radius: 10px;
-    &::placeholder {
-      color: black;
-    }
   }
   button#submit {
     width: auto;
